@@ -11,10 +11,11 @@ function update_quality() {
   for (var i = 0; i < items.length; i++) {
 
     var specialItems = new SpecialItems;
+    var legendaryItems = new LegendaryItems;
 
     if (!specialItems.isItSpecial(items[i])) {
       if (items[i].quality > 0) {
-        if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
+        if (!legendaryItems.isItLegendary(items[i])) {
           items[i].quality -= 1
         }
           if (items[i].name == 'Conjured') {
