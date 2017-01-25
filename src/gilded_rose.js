@@ -8,7 +8,11 @@ var items = []
 
 function update_quality() {
   for (var i = 0; i < items.length; i++) {
-    if (!isItSpecial(items[i])) {
+
+    var specialItems = new SpecialItems;
+
+
+    if (!specialItems.isItSpecial(items[i])) {
       if (items[i].quality > 0) {
         if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
           items[i].quality -= 1

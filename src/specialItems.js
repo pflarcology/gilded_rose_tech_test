@@ -4,7 +4,7 @@ function SpecialItems(name, sell_in, quality) {
   this.quality = quality;
 }
 
-function isItSpecial(item) {
+SpecialItems.prototype.isItSpecial = function(item) {
     if (item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert') {
       return true
     }
