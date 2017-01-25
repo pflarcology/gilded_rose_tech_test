@@ -54,5 +54,11 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(80)
   });
 
+  it("'Conjured' item should decrease in quality twice as quickly", function() {
+    items = [ new Item("Conjured", 1, 2) ];
+    update_quality();
+    expect(items[0].quality).toEqual(0)
+  });
+
 
 });
