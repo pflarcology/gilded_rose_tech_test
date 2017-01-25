@@ -1,6 +1,8 @@
 describe("Gilded Rose", function() {
 
 
+
+
   it("'Aged Brie' items should increase in quality", function() {
     items = [ new Item("Aged Brie", 0, 0) ];
     update_quality();
@@ -8,6 +10,7 @@ describe("Gilded Rose", function() {
   });
 
   it("The sell_in should decrease by one everytime update quality is run", function() {
+    // var spy = spyOn(specialItems, 'isItSpecial').and.returnValue(true);
     items = [ new Item("Iron Arrow", 1, 0) ];
     update_quality();
     expect(items[0].sell_in).toEqual(0)
