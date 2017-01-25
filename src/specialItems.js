@@ -5,7 +5,7 @@ function SpecialItems(name, sell_in, quality) {
 }
 
 function isItSpecial(item) {
-    if (item.name == 'Aged Brie') {
+    if (item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert') {
       return true
     }
     else {
