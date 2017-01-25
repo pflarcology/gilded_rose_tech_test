@@ -18,6 +18,11 @@ describe("Gilded Rose", function() {
     expect(items[0].sell_in).toEqual(0)
   });
 
-  it("
+  it("The quality should decrease by one everytime update quality is run", function() {
+    items = [ new Item("Iron Arrow", 0, 1) ];
+    update_quality();
+    expect(items[0].quality).toEqual(0)
+  });
+
 
 });
